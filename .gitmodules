@@ -1,0 +1,9 @@
+[submodule "libraries/codal-cm300"]
+	path = libraries/codal-cm300
+	url = https://github.com/ROBOTIS-GIT/codal-cm300.git
+[submodule "libraries/codal-nrf52"]
+	path = libraries/codal-nrf52
+	url = https://github.com/ROBOTIS-GIT/codal-nrf52.git
+[submodule "libraries/codal-core"]
+	path = libraries/codal-core
+	url = https://github.com/lancaster-university/codal-core.git
