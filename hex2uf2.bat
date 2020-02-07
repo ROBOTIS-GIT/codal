@@ -1,0 +1,1 @@
+.\utils\uf2conv.py .\BIN\CM300.hex -c -f 0xADA52840 -o .\BIN\CM300.uf2

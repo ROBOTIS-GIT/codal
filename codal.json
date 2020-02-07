@@ -1,0 +1,12 @@
+{
+    "target": {
+        "name": "codal-cm300", 
+        "url": "https://github.com/ROBOTIS-GIT/codal-cm300.git", 
+        "branch": "develop", 
+        "type": "git"
+    },
+    "config":{
+    },
+    "application":"source",
+    "output_folder":"./BIN"    
+}
