@@ -21,7 +21,7 @@ codal은 json파일을 통해 의존성 패키지 설치를 진행하는데, 이
 
 개발환경 구축을 스텝별로 설명하면 아래와 같다.
 
-1. 빌드시스템에 필요한 디펜던시 설치 : [Installation 참조](##Installation)
+1. 빌드시스템에 필요한 디펜던시 설치 : [Installation 참조](#Installation)
 2. codal git clone
 ```bash
 $ git clone --recursive https://github.com/ROBOTIS-GIT/codal.git -b develop
