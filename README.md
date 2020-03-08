@@ -4,6 +4,36 @@ The main repository for the Component Oriented Device Abstraction Layer (CODAL).
 
 This repository is an empty shell that provides the tooling needed to produce a bin/hex/uf2 file for a CODAL device.
 
+## ROBOTIS 개발자를 위한 문서
+Fork 이전의 repo는 codal의 빌드시스템을 위한 저장소였다.
+
+codal은 json파일을 통해 의존성 패키지 설치를 진행하는데, 이 방식을 보다 간소하게 하여 우리 개발자가 개발환경 구축을 보다 쉽게 하기 위해 별도의 저장소를 구축하였다.
+
+기존의 json에서 처리하는 것 대신에, submodule을 통해 개발자가 이 빌드시스템을 git으로 다운받으면, 자동으로 의존성 패키지들의 repos와 연결하도록 설정하였다.
+
+따라서, 개발자는 submodule에 있는 각 패키지들을 원하는 버전으로 checkout하여 사용하거나 branch생성을 포함한 git을 통한 개발을 진행하면 된다.
+
+즉, 추가된 폴더/파일 구조는 아래와 같다.
+
+- **libraries**
+    - **codal-cm300** : 타겟보드 패키지
+    - **codal-core** : codal core 패키지
+    - **codal-nrf52** : codal nrf52 core 패키지
+- **source**
+    - **main.cpp** : 빌드시 사용되는 어플리케이션 코드(main함수)
+- **hex2uf2.bat** : 빌드된 HEX파일을 uf2파일로 변환하는 스크립트 파일(batch) for only WINDOWS
+
+개발환경 구축을 스텝별로 설명하면 아래와 같다.
+
+1. 빌드시스템에 필요한 디펜던시 설치 : [Installation 참조](#Installation)
+2. codal git clone
+```bash
+$ git clone --recursive https://github.com/ROBOTIS-GIT/codal.git -b develop
+```
+3. 각 라이브러리 패키지에 대해 원하는 커밋/브랜치로 checkout (git checkout commit/branch)
+4. main.cpp 수정 및 빌드 : [Building 참조](#Building)
+
+
 ## Installation
 
 ### Automatic installation.
